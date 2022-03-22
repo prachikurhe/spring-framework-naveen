@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans   xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:p="http://www.springwork.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> <!-- bean definitions here -->
+         
+        <!-- FIRST BEAN USING P SCHEMA 
+        <bean class="com.springcore.Student" name="Student1"  p:studentId="111" p:studentName="Prachi" p:studentAddress="Kharwandi"/>
+        -->
+        
+        
+         <bean class="com.springcore.Student" name="Student1">
+        <property name="studentId" value="111"/>
+        
+        
+        <property name="studentName" value="Prachi"/>
+        
+        <property name="studentAddress">
+        <value>Kharwandi</value>
+        </property>
+        </bean>
+       
+        
+        
+        <!-- SECOND BEAN  USING VALUE AS ATTRIBUTE-->
+         <bean class="com.springcore.Student" name="Student2">
+        <property name="studentId" value="112"/>
+        
+        
+        <property name="studentName" value="Pratiksha"/>
+        
+        <property name="studentAddress">
+        <value>Newasa</value>
+        </property>
+        </bean>
+       </beans>
+        
