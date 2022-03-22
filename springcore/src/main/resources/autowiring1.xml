@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+"https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>	
+<!--  byType
+<bean  id="e1" class="com.autowiring.Engine">
+       <property name="modelYear" value="2016"/>
+ </bean>      
+       
+ <bean id ="e2" class="com.autowiring.Engine" autowire-candidate="false">
+ <property name="modelYear" value="2020"/>
+ </bean>
+      
+<bean id="c" class="com.autowiring.Car" autowire="byType">
+
+</bean>
+</beans>
+-->
+<!-- at least one bean class have ref name i.e id=engine -->
+<bean  id="engine" class="com.autowiring.Engine">
+       <property name="modelYear" value="2016"/>
+ </bean>      
+       
+ <bean id ="e2" class="com.autowiring.Engine" >
+ <property name="modelYear" value="2020"/>
+ </bean>
+      
+<bean id="c" class="com.autowiring.Car" autowire="byName">
+<!--  <property name="Engine" ref="e1"/>-->
+</bean>
+</beans>
