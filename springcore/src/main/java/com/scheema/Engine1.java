@@ -14,4 +14,11 @@ public class Engine1 {
 	public String getModelYear() {
 		return modelYear;
 	}
+
+	@Override
+	public String toString() {
+		return "Engine1 [modelYear=" + modelYear + "]";
+	}
+	
+	
 }
