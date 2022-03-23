@@ -1,0 +1,27 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/jdbc
+        http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+	<!-- Activate autowire annotation -->
+	<bean
+		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor">
+	</bean>
+
+	<bean primary="true" id="e1"
+		class="AutowiringUsingAnnotation.Engine">
+		<property name="modelYear" value="2014" />
+	</bean>
+
+	<bean id="e2" class="AutowiringUsingAnnotation.Engine">
+		<property name="modelYear" value="2015"></property>
+	</bean>
+
+
+	<bean id="c" class="AutowiringUsingAnnotation.Car">
+
+	</bean>
+
+</beans>

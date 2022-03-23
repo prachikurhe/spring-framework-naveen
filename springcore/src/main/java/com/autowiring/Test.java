@@ -12,7 +12,7 @@ public class Test {
 		//c.printData();
 		
 		
-		ApplicationContext context =new ClassPathXmlApplicationContext("autowiring2.xml");
+		ApplicationContext context =new ClassPathXmlApplicationContext("autowiring3.xml");
 		Bus b=(Bus) context.getBean("b");
 		b.printData();
 
