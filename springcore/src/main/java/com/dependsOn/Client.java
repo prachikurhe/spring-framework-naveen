@@ -15,7 +15,8 @@ public class Client {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ApplicationContext ap=new ClassPathXmlApplicationContext("collections2.xml");
+		ApplicationContext ap=new ClassPathXmlApplicationContext("abc.xml");
+		B b=(B) ap.getBean("b");
 		
 		
 		
